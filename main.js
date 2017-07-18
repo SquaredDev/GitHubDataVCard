@@ -19,7 +19,6 @@ function reqListener () {
   heading.innerHTML = headingStr
   let basicsStr = `<h2>The Basics</h2>`
   basicsStr += `<ul>`
-  basicsStr += `<ul>`
   basicsStr += `<li><span class='list'>Name: </span>${data.name}</li>`
   basicsStr += `<li><span class='list'>Github ULR: </span><a href='${data.html_url}'>${data.login}</a></li>`
   basicsStr += `<li><span class='list'>Email: </span>James@RangersSquaredDevs.Expert</li>`
