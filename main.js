@@ -3,7 +3,7 @@ let title = document.querySelector('title');
 let heading = document.querySelector('.heading');
 let basics = document.querySelector('.basics');
 let story = document.querySelector('.story');
-let picture = document.querySelector('.picture');
+let pic = document.querySelector('.pic');
 
 let req = new XMLHttpRequest();
 req.open("GET", "https://api.github.com/users/squareddev");
@@ -27,4 +27,8 @@ function reqListener () {
   basicsStr += `<li><span class='list'>Website: </span><a href='${data.blog}'>${data.blog}</a></li>`
   basicsStr += `</ul>`
   basics.innerHTML = basicsStr
+  let storyStr = `<h2>The Story</h2><p>${data.bio}</p>`
+  story.innerHTML = storyStr
+  let picStr = `<img src='${data.avatar_url}'/>`
+  pic.innerHTML = picStr
 }
